@@ -11,13 +11,13 @@ with np.load("mnist.npz") as data:
     y_train, y_test = np.eye(10)[y_train], np.eye(10)[y_test] # to one-hot
 
 # create the network
-layer_sizes = [784, 64, 64, 64, 10]
-net = CHLNet(layer_sizes, gamma=0.1, lr=0.05)
+layer_sizes = [784, 128, 10]
+net = CHLNet(layer_sizes, gamma=0.1, lr=0.01)
 
 # define simple training hyperparams
 batch_size = 8
 num_batches = ceil(len(x_train) / batch_size)
-num_epochs = 1
+num_epochs = 5
 
 # train the network using CHL
 for i in range(num_epochs):
