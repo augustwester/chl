@@ -57,7 +57,7 @@ class CHLNet:
         (i.e. all of the final activations) from both the free phase and the
         clamped phase. Note that the deltas for the weights and biases between
         layer k and layer k+1 only depend on the activations in the two layers.
-        There is no global loss function or backpropgation.
+        There is no global loss function or backpropagation.
         """
         num_samples = len(x_free[0])
         for k in range(self.L-1):
